@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Finistry Advisory — Chartered Accountant Practice | Income Tax, GST, Audit & Labour Calculators</title>
+<meta name="description" content="Finistry Advisory — Chartered Accountant practice in Madhapur, Hyderabad. Comprehensive GST, Income Tax (1961 & 2025 Acts), Statutory Audit, NGO (12A/80G), Transfer Pricing (3CEB), NPS, Gratuity, Bonus, E-Way Bill & E-Invoice compliance.">
+<meta name="theme-color" content="#17382e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ebe6d7;
+  --paper:#f6f3e9;
+  --alt:#e2dcc9;
+  --ink:#11221c;
+  --ink-soft:#2c4038;
+  --text:#3b4a44;
+  --muted:#5c6a63;
+  --gold:#a38a59;
+  --gold-deep:#7a6535;
+  --gold-light:#c9b27f;
+  --line:#d3ccb6;
+  --btn:#17382e;
+  --btn-hover:#0f2a22;
+  --card:#0b3b2e;
+  --card-text:#f5f3ec;
+  --card-dim:rgba(245,243,236,.68);
+  --card-line:rgba(245,243,236,.16);
+  --card-gold:#c9b27f;
+  --terra:#b5533f;
+  --focus:#1d4ed8;
+  --serif:"Fraunces",Georgia,serif;
+  --sans:"Manrope",system-ui,-apple-system,sans-serif;
+  --mono:"JetBrains Mono",monospace;
+}
+html{scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+p{margin:0}
+.wrap{width:min(1160px,100% - 48px);margin-inline:auto}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--ink);margin:0;font-weight:600;line-height:1.1;letter-spacing:-.02em}
+h1{font-size:clamp(2.6rem,5.8vw,4.6rem);letter-spacing:-.03em}
+h2{font-size:clamp(1.8rem,3.5vw,2.8rem)}
+h3{font-size:1.35rem}
+.eyebrow{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-bottom:14px}
+.mono{font-family:var(--mono)}
+.tnum{font-variant-numeric:tabular-nums}
+
+/* Topmost Live Compliance Stream Bar */
+.strip{font-family:var(--mono);font-size:.72rem;background:var(--card);color:var(--card-text);border-bottom:1px solid var(--card-line);position:sticky;top:0;z-index:40;width:100%}
+.strip .wrap{display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center;padding:10px 0}
+.strip .live{display:inline-flex;align-items:center;gap:8px;letter-spacing:.14em;text-transform:uppercase;color:var(--card-gold)}
+.strip .ring{width:8px;height:8px;border-radius:50%;background:#2f8a63;box-shadow:0 0 8px #2f8a63;animation:blink 2s infinite}
+@keyframes blink{50%{opacity:.3}}
+.strip .mid{text-align:center;color:var(--card-dim)}
+.strip .mid b{color:#fff}
+.strip .right b{color:var(--card-gold)}
+
+/* Brand & Typography */
+.brand{display:inline-flex;align-items:center;gap:18px;text-decoration:none}
+.brand-mark-box{display:flex;align-items:center;justify-content:center;position:relative}
+.fa-monogram-svg{width:56px;height:56px;flex:none}
+.brand-text{display:flex;align-items:baseline;gap:10px}
+.brand-title{font-family:var(--serif);font-size:2.3rem;font-weight:700;color:var(--ink);letter-spacing:-.02em;line-height:1}
+.brand-sub{font-family:var(--serif);font-style:italic;font-weight:400;font-size:2.3rem;color:var(--gold)}
+.brand-tagline-micro{display:block;font-size:.7rem;font-weight:500;color:var(--gold-deep);margin-top:3px;letter-spacing:.03em;text-transform:uppercase}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;font:600 .92rem/1 var(--sans);padding:16px 28px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;background:var(--btn);color:#fff;box-shadow:0 12px 24px -10px rgba(23,56,46,.4);transition:all .2s}
+.btn:hover{background:var(--btn-hover);transform:translateY(-1px)}
+.btn-sm{padding:10px 18px;font-size:.84rem}
+.link{font-weight:600;color:var(--ink);text-decoration:none;border-bottom:1.5px solid var(--gold);padding-bottom:2px}
+.link:hover{color:var(--gold-deep)}
+
+/* Header & Search */
+header.site{border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:37px;z-index:30}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:104px;gap:20px}
+nav.main{display:flex;align-items:center;gap:22px}
+nav.main a:not(.btn){text-decoration:none;font-size:.9rem;color:var(--text);font-weight:500}
+nav.main a:not(.btn):hover{color:var(--ink)}
+
+.search-box{position:relative;display:flex;align-items:center}
+.search-input{font:400 .85rem var(--sans);padding:9px 14px 9px 36px;border-radius:999px;border:1px solid var(--line);background:var(--paper);color:var(--ink);width:220px;transition:width .25s,border-color .25s}
+.search-input:focus{outline:none;width:300px;border-color:var(--gold)}
+.search-icon{position:absolute;left:12px;width:15px;height:15px;color:var(--muted)}
+
+/* Hero Section */
+.hero{padding:80px 0 72px;background:linear-gradient(180deg, var(--bg) 0%, var(--alt) 100%);border-bottom:1px solid var(--line)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.trust-list{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:10px;font-size:.88rem;color:var(--ink-soft)}
+.trust-list li{display:flex;align-items:center;gap:10px}
+.trust-list svg{width:16px;height:16px;color:var(--gold-deep);flex:none}
+
+/* Radar Stream Card */
+.radar-card{background:var(--card);color:var(--card-text);border-radius:20px;padding:28px;box-shadow:0 30px 60px -25px rgba(11,59,46,.5);border:1px solid var(--card-line)}
+.radar-card .hd{display:flex;justify-content:space-between;align-items:center;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--card-gold);border-bottom:1px solid var(--card-line);padding-bottom:14px}
+.radar-list{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:14px}
+.radar-item{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:start;padding-bottom:12px;border-bottom:1px solid var(--card-line)}
+.radar-item:last-child{border-bottom:0;padding-bottom:0}
+.radar-item .act-tag{font-family:var(--mono);font-size:.65rem;text-transform:uppercase;color:var(--card-gold);background:rgba(201,178,127,.12);padding:2px 8px;border-radius:4px;display:inline-block;margin-bottom:4px}
+.radar-item .pen{font-size:.75rem;color:#f3a891;margin-top:4px}
+
+/* Bento Services & Sectors */
+section.block{padding:92px 0}
+section.alt{background:var(--alt)}
+.bento-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.cardx{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:28px;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.cardx:hover{transform:translateY(-3px);box-shadow:0 20px 35px -20px rgba(17,34,28,.25)}
+.cardx .no{font-family:var(--mono);font-size:.75rem;color:var(--gold-deep);margin-bottom:16px}
+.cardx.wide{grid-column:span 2}
+
+.sector-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.sector-card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:26px;display:flex;flex-direction:column}
+.sector-icon{width:46px;height:46px;border-radius:12px;background:var(--btn);color:var(--gold-light);display:grid;place-items:center;margin-bottom:16px}
+.sector-card h3{font-size:1.15rem;margin-bottom:8px}
+.sector-card p{font-size:.88rem;color:var(--text);font-weight:300}
+.sector-card .act-chip{font-family:var(--mono);font-size:.68rem;color:var(--gold-deep);margin-top:14px;background:var(--bg);padding:4px 8px;border-radius:4px;display:inline-block;align-self:flex-start}
+
+/* Advanced Calculators */
+.calc-tabs{display:flex;gap:12px;margin-bottom:28px;border-bottom:2px solid var(--line);padding-bottom:12px;flex-wrap:wrap}
+.calc-tab-btn{font:600 .9rem var(--sans);padding:10px 18px;border-radius:999px;border:1px solid var(--line);background:var(--paper);color:var(--ink);cursor:pointer}
+.calc-tab-btn.active{background:var(--btn);color:#fff;border-color:var(--btn)}
+
+.calc-box{background:var(--card);color:var(--card-text);border-radius:22px;padding:34px;box-shadow:0 30px 60px -30px rgba(11,59,46,.5)}
+.calc-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:36px}
+.calc-field{margin-bottom:16px}
+.calc-field label{display:block;font-size:.82rem;color:var(--card-text);margin-bottom:5px;font-weight:500}
+.calc-field input,.calc-field select{width:100%;font:500 .9rem var(--sans);padding:10px 14px;border-radius:10px;border:1px solid var(--card-line);background:rgba(245,243,236,.08);color:var(--card-text)}
+.calc-field select option{background:var(--card);color:#fff}
+.calc-alert{font-size:.72rem;color:#f3a891;margin-top:4px;display:none}
+
+.calc-res{background:rgba(245,243,236,.05);border-radius:16px;padding:24px;border:1px solid var(--card-line)}
+.calc-res-row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px dashed var(--card-line);font-size:.9rem}
+.calc-res-row:last-child{border-bottom:0}
+.calc-res-row.total{font-weight:700;font-size:1.2rem;color:var(--card-gold);border-top:2px solid var(--card-line);margin-top:8px;padding-top:14px}
+
+/* Form & Footer */
+form.fx{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:32px;box-shadow:0 20px 40px -25px rgba(17,34,28,.15)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+form .f{margin-bottom:18px}
+form label{display:block;font-size:.84rem;color:var(--ink-soft);margin-bottom:6px;font-weight:500}
+form input,form select,form textarea{width:100%;font:400 .95rem var(--sans);padding:12px 16px;border-radius:10px;border:1px solid var(--line);background:var(--paper);color:var(--ink)}
+
+footer{border-top:1px solid var(--line);padding:56px 0 40px;background:var(--bg)}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+
+@media (max-width:960px){
+  .hero .wrap,.calc-grid,.fgrid,.form-row{grid-template-columns:1fr}
+  .bento-grid,.sector-grid{grid-template-columns:1fr}
+  .cardx.wide{grid-column:auto}
+  header.site .wrap{height:auto;padding:16px 0;flex-wrap:wrap}
+  nav.main{overflow-x:auto;width:100%;padding-bottom:8px}
+}
+
+/* Added: calendar, UDIN, forms, calculator extras */
+.act-tag.ext{color:#e8c46a;background:rgba(232,196,106,.16)}
+.cd{font:600 .82rem var(--mono);white-space:nowrap;text-align:right}.cd.g{color:#5fd09b}.cd.a{color:#e8c46a}.cd.r{color:#f3a891}
+.cal{background:var(--card);color:var(--card-text);border-radius:22px;padding:8px 26px}
+.cal .radar-item{grid-template-columns:64px 1fr auto;align-items:center}.dd{font:700 1.6rem var(--serif);line-height:1;color:var(--card-gold);text-align:center}.dd small{display:block;font:600 .62rem var(--mono);letter-spacing:.1em}
+.cal-f{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
+.udin{display:inline-block;font:600 .66rem var(--mono);background:var(--btn);color:var(--gold-light);padding:3px 8px;border-radius:4px;margin-top:12px;align-self:flex-start;letter-spacing:.06em}
+.tblw{overflow-x:auto;max-width:100%}.tbl{width:100%;border-collapse:collapse;background:var(--paper);border:1px solid var(--line);font-size:.9rem}
+.tbl th{background:var(--card);color:var(--card-gold);text-align:left;font:600 .72rem var(--mono);letter-spacing:.1em;text-transform:uppercase;padding:12px 14px}.tbl td{padding:11px 14px;border-top:1px solid var(--line)}.tbl td b{font-family:var(--mono);color:var(--gold-deep)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.calc-res-row b{font-family:var(--mono);font-weight:600;text-align:right;font-size:.85rem}
+.calc-res-row.c3{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:8px}.calc-res-row.h{color:var(--card-gold);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+.banner{background:rgba(95,208,155,.14);border:1px solid rgba(95,208,155,.4);border-radius:12px;padding:11px 14px;margin-bottom:10px;font-weight:600;font-size:.9rem}
+.note{font-size:.75rem;color:var(--card-dim);margin-top:12px}.warn{color:#f3a891}
+@media (max-width:960px){.two{grid-template-columns:1fr}.cal .radar-item{grid-template-columns:56px 1fr}.cal .cd{grid-column:2;text-align:left}}
+</style>
+</head>
+<body>
+
+<!-- Live Compliance Stream Bar properly aligned at the very top -->
+<div class="strip">
+  <div class="wrap">
+    <span class="live"><i class="ring"></i> Live Compliance Stream Active</span>
+    <span class="mid" id="stripClock">—</span>
+    <span class="right">Next Statutory Due Date: <b id="stripNext">calculating…</b></span>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#" aria-label="Finistry Advisory Home">
+      <div class="brand-mark-box">
+        <svg class="fa-monogram-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="100" height="100" rx="20" fill="#17382e"/>
+          <text x="50" y="65" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-style="italic" font-weight="600" font-size="46" fill="#c9b27f">FA</text>
+        </svg>
+      </div>
+      <div>
+        <div class="brand-text">
+          <span class="brand-title">Finistry</span>
+          <span class="brand-sub">Advisory</span>
+        </div>
+        <span class="brand-tagline-micro">Precision in Numbers. Clarity in Decisions.</span>
+      </div>
+    </a>
+
+    <div class="search-box">
+      <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="text" class="search-input" id="siteSearch" placeholder="Search E-Way Bill, E-Invoice..." onkeyup="filterSiteContent()">
+    </div>
+
+    <nav class="main">
+      <a href="#services">Services</a>
+      <a href="#sectors">Sectors</a>
+      <a href="#udin">UDIN</a>
+      <a href="#calendar">Compliance Stream</a>
+      <a href="#calculators">Calculators</a>
+      <a href="#about">About</a>
+      <a class="btn btn-sm" href="#contact">Book Free Call</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Your numbers, <em>filed on time,</em> every time.</h1>
+      <p style="margin-top:18px;max-width:54ch;font-weight:300;font-size:1.05rem">
+        Finistry Advisory provides Chartered Accountant-led taxation, audit, and strategic financial compliance under the <strong>Income-Tax Act, 2025</strong> (Tax Year 2026-27 onwards) and the <strong>Income-Tax Act, 1961</strong> for earlier years. Full support across all ERPs (Tally Prime, Zoho Books, SAP, Oracle, QuickBooks), headquartered in Madhapur, Hyderabad.
+      </p>
+      <div style="margin-top:32px;display:flex;gap:18px;align-items:center;flex-wrap:wrap">
+        <a class="btn" href="#contact">Book a free call within 24 hours</a>
+        <a class="link" href="#calculators">Explore Financial & Tax Calculators →</a>
+      </div>
+      <ul class="trust-list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Guaranteed CA consultation response within 24 hours</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Direct partner oversight on every engagement</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Multi-ERP integration & Automated Financial Reporting</li>
+      </ul>
+    </div>
+
+    <aside class="radar-card" id="radar">
+      <div class="hd">
+        <span>Live Compliance Stream & Penalties</span>
+        <span id="radarMonth" class="mono">—</span>
+      </div>
+      <div class="radar-list" id="radarItems"></div>
+      <p style="margin-top:14px;font-size:.75rem;color:var(--card-dim)">Live statutory countdown incorporating Sec 234 interest, Form 48 penalties & GST Sec 47 late fees.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="block" id="services">
+  <div class="wrap">
+    <div class="eyebrow">Our Core Expertise</div>
+    <h2>Comprehensive Chartered Accountant Practice Scope</h2>
+    <p style="margin-top:10px;margin-bottom:36px;max-width:60ch;font-weight:300">End-to-end direct tax, indirect tax (including E-Way Bill & E-Invoice thresholds), statutory audits, transfer pricing, labour code compliance, and multi-ERP accounting.</p>
+
+    <div class="bento-grid">
+      <article class="cardx wide searchable">
+        <div class="no">01 / INCOME-TAX ACTS (1961 & 2025) & NRI DTAA</div>
+        <h3>Income Tax, 5 Heads, NRI Taxation & DTAA Structuring</h3>
+        <p>Comprehensive tax return filings under both 1961 and 2025 Act frameworks, advance tax computations, capital gains structuring (STCG/LTCG), NRI taxation, Double Tax Avoidance Agreement (DTAA) relief claims, and agricultural income integration.</p>
+      </article>
+
+      <article class="cardx searchable">
+        <div class="no">02 / INDIRECT TAXES, E-WAY & E-INVOICE</div>
+        <h3>GST Returns, E-Way Bill, E-Invoice (₹5Cr Limit) & ITC Audit</h3>
+        <p>Monthly GSTR-1 & GSTR-3B filings, E-Way Bill generation rules (₹50k threshold), E-Invoicing mandates for AATO &gt; ₹5 Crore with strict 30-day IRP reporting for turnover &gt; ₹10 Crore, and GSTR-2B input tax credit matching.</p>
+      </article>
+
+      <article class="cardx searchable">
+        <div class="no">03 / AUDIT & ASSURANCE</div>
+        <h3>Statutory Audits, Tax Audit (Form 26) & Form 48</h3>
+        <p>Statutory company audits under Companies Act, tax audit report in unified Form 26 (s.63 of the 2025 Act, erstwhile 3CA/3CB/3CD), Transfer Pricing certification (Form 48, erstwhile 3CEB), Internal Financial Controls (IFC), and stock/lender audits.</p>
+      </article>
+
+      <article class="cardx wide searchable">
+        <div class="no">04 / NGO & PHILANTHROPIC PRACTICE</div>
+        <h3>NGOs, Trusts, Section 12A & 80G Registrations</h3>
+        <p>Complete compliance for trusts, societies, and Section 8 companies including Form 10A/10AB registration for Section 12A & 80G, FCRA filings, Form 112 audit reports (erstwhile 10B/10BB), and donor fund utilization certification.</p>
+      </article>
+
+      <article class="cardx searchable">
+        <div class="no">05 / MULTI-ERP BOOKKEEPING</div>
+        <h3>Bookkeeping & ERP Setup (Tally, Zoho, SAP, Oracle)</h3>
+        <p>We work across <strong>all ERPs and accounting systems</strong> (Tally Prime, Zoho Books, SAP, Oracle, QuickBooks), managing bank reconciliations, inventory accounting, cost-center cleanup, and automated MIS reporting.</p>
+      </article>
+
+      <article class="cardx searchable">
+        <div class="no">06 / CORPORATE & LABOUR CODES</div>
+        <h3>ROC Compliance, Gratuity & Statutory Bonus</h3>
+        <p>Private Limited, LLP & OPC incorporation, ROC annual filings (AOC-4, MGT-7, DIR-3 KYC), MSME Udyam registration, and implementation of Labour Codes covering Statutory Gratuity, Bonus, PF & ESI.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="block alt" id="sectors">
+  <div class="wrap">
+    <div class="eyebrow">Industry Verticals</div>
+    <h2>Sector-Specific Practice Expertise</h2>
+    <p style="margin-top:10px;margin-bottom:36px;max-width:62ch;font-weight:300">Customized statutory workflows built for specialized operating environments with enhanced pictograms.</p>
+
+    <div class="sector-grid">
+      <article class="sector-card searchable">
+        <div class="sector-icon">🌾</div>
+        <h3>Agriculture & Agro-Processing</h3>
+        <p>Agricultural income tax exemption documentation (Sec 10), farm-gate supply chain GST compliance, co-operative society audits, and agro-processing unit subsidies.</p>
+        <span class="act-chip">Income-Tax Acts Sec 10 & APMC</span>
+      </article>
+
+      <article class="sector-card searchable">
+        <div class="sector-icon">🏢</div>
+        <h3>Real Estate & Infra</h3>
+        <p>Project-wise accounting, RERA compliance certificates, JDA tax structuring, works contract GST, and real estate escrow audits.</p>
+        <span class="act-chip">TG-RERA & GST Sec 17(5)</span>
+      </article>
+
+      <article class="sector-card searchable">
+        <div class="sector-icon">💻</div>
+        <h3>IT & Software Exports</h3>
+        <p>Export of services without payment of tax (LUT), GST refund claims, SEZ compliance, Form 48 transfer pricing study, and ESOP perquisite tax.</p>
+        <span class="act-chip">FEMA & IT Acts</span>
+      </article>
+
+      <article class="sector-card searchable">
+        <div class="sector-icon">💊</div>
+        <h3>Pharma & Healthcare</h3>
+        <p>Batch-wise inventory costing, expiry return tax treatments, R&D weighted deductions, and multi-state distribution GST reconciliations.</p>
+        <span class="act-chip">Income-Tax Acts & DCGI</span>
+      </article>
+
+      <article class="sector-card searchable">
+        <div class="sector-icon">🏭</div>
+        <h3>Manufacturing & Auto</h3>
+        <p>Job-work challan reconciliations, AS-2 / Ind AS 2 inventory valuation, MSME 45-day payment rules, and capital goods ITC tracking.</p>
+        <span class="act-chip">MSMED Act & Labour Codes</span>
+      </article>
+
+      <article class="sector-card searchable">
+        <div class="sector-icon">🏗️</div>
+        <h3>Construction & Contracts</h3>
+        <p>Percentage of completion method (POCM), TDS on sub-contractors, retention money accounting, and bank guarantee documentation.</p>
+        <span class="act-chip">ICDS & GST Works Contract</span>
+      </article>
+
+      <article class="sector-card searchable">
+        <div class="sector-icon">⚖️</div>
+        <h3>Service Sector & Agencies</h3>
+        <p>Recurring client invoicing, reverse charge mechanism (RCM), professional tax, cost-per-seat analysis, and lean compliance.</p>
+        <span class="act-chip">Telangana PT Act</span>
+      </article>
+
+      <article class="sector-card searchable">
+        <div class="sector-icon">🍽️</div>
+        <h3>Restaurants & Cloud Kitchens</h3>
+        <p>Aggregator (Zomato/Swiggy) TCS reconciliation, food cost & wastage controls, daily cashier audits, and POS ERP integration.</p>
+        <span class="act-chip">GST Sec 9(5) & FSSAI</span>
+      </article>
+
+      <article class="sector-card searchable">
+        <div class="sector-icon">🤝</div>
+        <h3>NGOs & Philanthropic Trusts</h3>
+        <p>12A & 80G registration, Form 112 audit, FCRA compliance, corpus donation accounting, and donor utilization reporting.</p>
+        <span class="act-chip">Income-Tax Sec 11, 12A, 80G</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="udin"><div class="wrap">
+  <div class="eyebrow">Certification &amp; Attest Services</div><h2>CA Certificates with UDIN</h2>
+  <p style="margin:10px 0 36px;max-width:66ch;font-weight:300">Every attest and certification signed by a Chartered Accountant carries a mandatory 18-digit ICAI Unique Document Identification Number (UDIN), generated on the ICAI portal and verifiable by banks, regulators and embassies.</p>
+  <div class="bento-grid">
+    <article class="cardx"><div class="no">NET WORTH</div><h3>Net Worth &amp; Solvency Certificate</h3><p>For visas, bank loans, tenders, NBFC and FDI requirements.</p><span class="udin">UDIN REQUIRED</span></article>
+    <article class="cardx"><div class="no">FEMA / FOREIGN REMITTANCE</div><h3>Form 146 (erstwhile 15CB)</h3><p>Accountant's certificate for foreign remittances, paired with Form 145 (15CA), plus FEMA, FC-GPR and ODI certificates.</p><span class="udin">UDIN REQUIRED</span></article>
+    <article class="cardx"><div class="no">TURNOVER &amp; INCOME</div><h3>Turnover, Income &amp; Net Profit Certificates</h3><p>For loans, tenders, Udyam, subsidies, passport and embassy applications.</p><span class="udin">UDIN REQUIRED</span></article>
+    <article class="cardx"><div class="no">BANK &amp; LENDER</div><h3>CMA Data, Projections &amp; Stock Certificates</h3><p>Project reports, DSCR, working capital, drawing-power and end-use-of-funds certificates.</p><span class="udin">UDIN REQUIRED</span></article>
+    <article class="cardx"><div class="no">TAX AUDIT &amp; TP</div><h3>Form 26, Form 48 &amp; Form 66</h3><p>Tax audit report, transfer pricing report and MAT report (erstwhile 29B) with UDIN.</p><span class="udin">UDIN REQUIRED</span></article>
+    <article class="cardx"><div class="no">GST</div><h3>GSTR-9C &amp; GST Certificates</h3><p>Reconciliation statement, refund turnover certificates and LUT-related CA certificates.</p><span class="udin">UDIN REQUIRED</span></article>
+    <article class="cardx"><div class="no">NGO &amp; TRUST</div><h3>Form 112, Utilisation &amp; FCRA Certificates</h3><p>Audit of registered non-profits, grant utilisation certificates and FCRA audit.</p><span class="udin">UDIN REQUIRED</span></article>
+    <article class="cardx"><div class="no">CAPITAL GAINS &amp; ASSETS</div><h3>Capital Gains, Slump Sale (Form 28) &amp; Valuation</h3><p>Capital gains computation, slump-sale net worth (erstwhile 3CEA) and asset certificates.</p><span class="udin">UDIN REQUIRED</span></article>
+    <article class="cardx"><div class="no">COMPANY &amp; ROC</div><h3>Share Capital, Paid-up &amp; Compliance Certificates</h3><p>Paid-up capital, shareholding, director remuneration and Companies Act certifications.</p><span class="udin">UDIN REQUIRED</span></article>
+  </div>
+</div></section>
+
+<section class="block alt" id="calendar"><div class="wrap">
+  <div class="eyebrow">Live Compliance Calendar</div><h2>Every statutory due date, counting down in real time</h2>
+  <p style="margin:10px 0 28px;max-width:66ch;font-weight:300">Auto-generated from today for the next 75 days, with CBDT-extended income tax dates for AY 2026-27 flagged. Always verify against the latest CBDT/CBIC/MCA notifications.</p>
+  <div class="cal-f" id="calF"></div><div class="cal" id="calList"></div>
+</div></section>
+
+<section class="block" id="calculators">
+  <div class="wrap">
+    <div class="eyebrow">Interactive Decision Tools</div>
+    <h2>Advanced Compliance &amp; Financial Calculators</h2>
+    <p style="margin-top:10px;margin-bottom:28px;max-width:60ch;font-weight:300">Professional-grade calculators incorporating strict statutory limit blocks, E-Way Bill &amp; E-Invoice criteria, NPS retirement planning, Statutory Bonus, and Gratuity caps.</p>
+    <div class="calc-tabs" id="tabs"></div>
+    <div class="calc-box"><div class="calc-grid">
+      <div><h3 id="cTitle" style="color:var(--card-gold);margin-bottom:16px"></h3><div id="cIn"></div></div>
+      <div><h3 style="color:#fff;margin-bottom:16px">Tax Computation &amp; Liability Output</h3><div class="calc-res" id="cOut"></div></div>
+    </div></div>
+    <div style="margin-top:72px">
+  <div class="eyebrow">Income-tax Act 2025 · Rules 2026</div><h2 style="margin-top:0">New sections &amp; form numbers at a glance</h2>
+  <p style="margin:10px 0 28px;max-width:66ch;font-weight:300">The Income-tax Act, 2025 applies from 1 April 2026 (Tax Year 2026-27). Forms were renumbered under the Income-tax Rules, 2026. Old numbers still apply to earlier years' assessments.</p>
+  <div class="tblw"><table class="tbl" id="ftbl"><thead><tr><th>Purpose</th><th>Old (1961 Act)</th><th>New (2025 Act)</th><th>Section</th></tr></thead><tbody>
+  <tr><td>Tax audit report &amp; particulars (unified)</td><td>3CA / 3CB / 3CD</td><td><b>Form 26</b></td><td>s.63</td></tr>
+  <tr><td>Transfer pricing accountant's report</td><td>3CEB</td><td><b>Form 48</b></td><td>—</td></tr>
+  <tr><td>Salary TDS certificate</td><td>Form 16</td><td><b>Form 130</b></td><td>s.392</td></tr>
+  <tr><td>Non-salary TDS certificate</td><td>Form 16A</td><td><b>Form 131</b></td><td>s.393</td></tr>
+  <tr><td>TCS certificate</td><td>Form 27D</td><td><b>Form 133</b></td><td>—</td></tr>
+  <tr><td>Quarterly TDS returns (salary / resident / non-resident)</td><td>24Q / 26Q / 27Q</td><td><b>Form 138 / 140 / 144</b></td><td>—</td></tr>
+  <tr><td>No-TDS declaration (merged)</td><td>15G / 15H</td><td><b>Form 121</b></td><td>s.393</td></tr>
+  <tr><td>Annual tax statement</td><td>26AS</td><td><b>Form 168</b></td><td>—</td></tr>
+  <tr><td>Foreign remittance info / CA certificate</td><td>15CA / 15CB</td><td><b>Form 145 / 146</b></td><td>—</td></tr>
+  <tr><td>Non-profit audit report</td><td>10B / 10BB</td><td><b>Form 112</b></td><td>—</td></tr>
+  <tr><td>Statement of donations</td><td>10BD</td><td><b>Form 113</b></td><td>—</td></tr>
+  <tr><td>Foreign tax credit</td><td>Form 67</td><td><b>Form 44</b></td><td>—</td></tr>
+  <tr><td>MAT report</td><td>29B</td><td><b>Form 66</b></td><td>—</td></tr>
+  <tr><td>Slump sale net worth certificate</td><td>3CEA</td><td><b>Form 28</b></td><td>—</td></tr>
+  <tr><td>Slab rates (new regime default)</td><td>115BAC</td><td><b>Tax rates</b></td><td>s.202</td></tr>
+  <tr><td>Rebate for resident individuals</td><td>87A</td><td><b>Rebate</b></td><td>s.156</td></tr>
+  <tr><td>Standard deduction (salary)</td><td>16(ia)</td><td><b>Std deduction</b></td><td>s.19</td></tr></tbody></table></div>
+  <p style="margin-top:12px;font-size:.82rem;color:var(--muted)">Section numbers shown only where confirmed; ask us for the full cross-reference for your return.</p>
+</div>
+  </div>
+</section>
+<section class="block alt" id="about">
+  <div class="wrap" style="display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:center">
+    <div>
+      <div class="eyebrow">Practice Leadership</div>
+      <h2>A Chartered Accountant-led practice</h2>
+      <div style="margin-top:20px">
+        <div class="eyebrow">Founder</div>
+        <h3>Sainath Reddy</h3>
+        <p>Chartered Accountant</p>
+      </div>
+      <p style="margin-top:16px;font-weight:300">
+        Finistry Advisory is a specialized Chartered Accountant practice headquartered in Madhapur, Hyderabad. We provide direct partner-level access to every client engagement, ensuring seamless execution across Income-Tax Act transitions, statutory audits, transfer pricing (Form 48), NGO setups (12A/80G), and multi-ERP accounting systems.
+      </p>
+      <div style="margin-top:24px;display:grid;gap:12px">
+        <div style="display:flex;gap:12px;align-items:center">
+          <div style="width:10px;height:10px;border-radius:50%;background:var(--gold)"></div>
+          <span>Expertise in Income-Tax Acts, Form 48 Transfer Pricing & DTAA.</span>
+        </div>
+        <div style="display:flex;gap:12px;align-items:center">
+          <div style="width:10px;height:10px;border-radius:50%;background:var(--gold)"></div>
+          <span>Multi-ERP support across Tally Prime, Zoho Books, SAP, Oracle & QuickBooks.</span>
+        </div>
+        <div style="display:flex;gap:12px;align-items:center">
+          <div style="width:10px;height:10px;border-radius:50%;background:var(--gold)"></div>
+          <span>Dedicated compliance desk for Hyderabad startups, real estate, and NGOs.</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:var(--card);color:var(--card-text);padding:36px;border-radius:20px;border:1px solid var(--card-line)">
+      <h3 style="color:var(--card-gold);margin-bottom:18px">Official Office Details</h3>
+      <p style="margin-bottom:8px"><strong>Firm Name:</strong> Finistry Advisory</p>
+      <p style="margin-bottom:8px"><strong>Practice:</strong> Chartered Accountants</p>
+      <p style="margin-bottom:8px"><strong>Address:</strong> 1st Floor, Unispace, Madhapur, Hyderabad, Telangana 500081</p>
+      <p style="margin-bottom:8px"><strong>Phone:</strong> +91 85208 45626</p>
+      <p style="margin-bottom:8px"><strong>Email:</strong> sainath@finistryadvisory.com</p>
+      <p style="margin-bottom:0"><strong>Response Window:</strong> Guaranteed callback within 24 hours</p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="contact">
+  <div class="wrap" style="display:grid;grid-template-columns:1fr 1.2fr;gap:56px">
+    <div>
+      <div class="eyebrow">Get in Touch</div>
+      <h2>Request a Free Consultation</h2>
+      <p style="margin-top:14px;font-weight:300">
+        Fill out the form to schedule a 20-minute advisory call with a Chartered Accountant. We respond to all queries within 24 hours.
+      </p>
+
+      <div style="margin-top:32px;display:grid;gap:16px">
+        <div>
+          <small style="text-transform:uppercase;color:var(--muted);letter-spacing:.1em">Direct Call</small>
+          <p style="font-size:1.1rem;font-weight:600;color:var(--ink)"><a href="tel:+918520845626">+91 85208 45626</a></p>
+        </div>
+        <div>
+          <small style="text-transform:uppercase;color:var(--muted);letter-spacing:.1em">Email Consultation</small>
+          <p style="font-size:1.1rem;font-weight:600;color:var(--ink)"><a href="mailto:sainath@finistryadvisory.com">sainath@finistryadvisory.com</a></p>
+        </div>
+      </div>
+    </div>
+
+    <form class="fx" id="consultationForm" onsubmit="handleFormSubmit(event)">
+      <div class="form-row">
+        <div class="f">
+          <label for="cName">Full Name *</label>
+          <input type="text" id="cName" required placeholder="e.g., Rajesh Kumar">
+        </div>
+        <div class="f">
+          <label for="cPhone">Phone Number *</label>
+          <input type="tel" id="cPhone" required placeholder="+91 98765 43210">
+        </div>
+      </div>
+
+      <div class="f">
+        <label for="cEmail">Work Email *</label>
+        <input type="email" id="cEmail" required placeholder="name@company.com">
+      </div>
+
+      <div class="f">
+        <label for="cService">Primary Service Needed</label>
+        <select id="cService">
+          <option>Income Tax Acts / NRI DTAA Advisory</option>
+          <option>GST Monthly Returns, E-Way Bill & E-Invoice Audit</option>
+          <option>Statutory Audit, Form 26 & Form 48 Transfer Pricing</option>
+          <option>CA Certificate with UDIN</option>
+          <option>NGO / Trusts 12A & 80G Registration</option>
+          <option>Multi-ERP Bookkeeping & MIS (Tally, Zoho, SAP)</option>
+          <option>Labour Codes, Gratuity & Statutory Bonus</option>
+          <option>Company Incorporation & Startup Advisory</option>
+        </select>
+      </div>
+
+      <div class="f">
+        <label for="cMsg">Brief Requirement</label>
+        <textarea id="cMsg" rows="3" placeholder="Share your key requirements..."></textarea>
+      </div>
+
+      <button type="submit" class="btn" style="width:100%">Book Call (Guaranteed within 24 Hours)</button>
+      <div id="formStatus" style="margin-top:12px;font-size:.88rem;text-align:center"></div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a class="brand" href="#">
+          <div class="brand-text">
+            <span class="brand-title">Finistry</span>
+            <span class="brand-sub">Advisory</span>
+          </div>
+        </a>
+        <p style="margin-top:14px;font-size:.85rem;color:var(--muted)">
+          Chartered Accountant Practice · Tax, GST, Audit, NGO (12A/80G) & Multi-ERP Advisory.<br>
+          1st Floor, Unispace, Madhapur, Hyderabad, Telangana 500081.
+        </p>
+      </div>
+
+      <div>
+        <h4 style="font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:14px">Official Portals</h4>
+        <p style="font-size:.85rem;margin-bottom:6px"><a href="https://www.incometax.gov.in" target="_blank" rel="noopener">Income Tax Department Official Portal ↗</a></p>
+        <p style="font-size:.85rem;margin-bottom:6px"><a href="https://www.gst.gov.in" target="_blank" rel="noopener">GST Portal ↗</a></p>
+        <p style="font-size:.85rem;margin-bottom:6px"><a href="https://www.mca.gov.in" target="_blank" rel="noopener">MCA Portal (Companies Act) ↗</a></p>
+        <p style="font-size:.85rem"><a href="https://rera.telangana.gov.in" target="_blank" rel="noopener">Telangana RERA ↗</a></p>
+      </div>
+
+      <div>
+        <h4 style="font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:14px">Direct Contact</h4>
+        <p style="font-size:.85rem;margin-bottom:6px">Call: +91 85208 45626</p>
+        <p style="font-size:.85rem;margin-bottom:6px">Email: sainath@finistryadvisory.com</p>
+        <p style="font-size:.85rem">Hours: Mon-Sat, 10:00 - 19:00 IST</p>
+      </div>
+    </div>
+
+    <div style="margin-top:36px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;font-size:.8rem;color:var(--muted)">
+      <span>© 2026 Finistry Advisory. All rights reserved.</span>
+      <span>Chartered Accountant-led practice.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const INR=n=>'₹'+Math.round(n).toLocaleString('en-IN'),$=id=>document.getElementById(id);
+
+/* ---- Live compliance calendar (with CBDT extensions for AY 2026-27) ---- */
+const MON=['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+function build(){const now=new Date(),out=[],add=(y,m,d,cat,t,pen,ext)=>out.push({d:new Date(y,m,d,23,59,59),cat,t,pen,ext});
+ for(let k=-1;k<=3;k++){const D=new Date(now.getFullYear(),now.getMonth()+k,1),y=D.getFullYear(),m=D.getMonth(),x26=y===2026;
+  add(y,m,7,'TDS','TDS/TCS deposit for previous month','Interest 1.5%/month + late fee on returns');
+  add(y,m,10,'Labour','Telangana Professional Tax','Penalty & interest per TG PT Act');
+  add(y,m,11,'GST','GSTR-1 (monthly filers)','Late fee ₹50/day (₹20 nil), capped');
+  add(y,m,15,'Labour','PF & ESI contribution deposit','Interest 12% p.a. + damages up to 25%');
+  add(y,m,20,'GST','GSTR-3B (monthly filers)','Interest 18% p.a. + late fee');
+  if([5,8,11,2].includes(m))add(y,m,15,'Income Tax','Advance tax instalment ('+{5:'15%',8:'45%',11:'75%',2:'100%'}[m]+' cumulative)','Interest for short/deferred payment @1%/month');
+  if([0,6,9].includes(m))add(y,m,31,'TDS','Quarterly TDS returns (Forms 138 / 140 / 144)','Late fee ₹200/day + penalty');
+  if(m===6)add(y,m,31,'Income Tax','ITR: non-audit individuals / HUF','Fee ₹5,000 (₹1,000 if income ≤ ₹5L) + interest');
+  if(x26&&m===9)add(y,m,21,'Income Tax','Tax audit report: Form 26 (erstwhile 3CA/3CB/3CD)','Penalty: lower of 0.5% of turnover or ₹1.5 lakh','Extended from 30 Sep 2026');
+  else if(m===8)add(y,m,30,'Income Tax','Tax audit report: Form 26 (erstwhile 3CA/3CB/3CD)','Penalty: lower of 0.5% of turnover or ₹1.5 lakh');
+  if(x26&&m===10)add(y,m,21,'Income Tax','ITR: audit cases (non-company)','Fee up to ₹5,000–10,000 + interest','Extended from 31 Oct 2026');
+  else if(m===9)add(y,m,31,'Income Tax','ITR: audit cases (non-company)','Fee up to ₹5,000–10,000 + interest');
+  if(m===9)add(y,m,31,'Income Tax','Transfer pricing report: Form 48 (erstwhile 3CEB)','Penalty ₹1 lakh. Check for CBDT extension');
+  if(m===9)add(y,m,30,'ROC','AOC-4 financial statements (if AGM 30 Sep)','₹100/day additional fee');
+  if(m===10){add(y,m,30,'Income Tax','ITR: transfer pricing cases','Fee + interest. Check for CBDT extension');add(y,m,29,'ROC','MGT-7 annual return','₹100/day additional fee')}
+  if(m===11){add(y,m,31,'Income Tax','Belated / revised ITR (AY 2026-27)','Last date; late fee applies');add(y,m,31,'GST','GSTR-9 annual return (previous FY)','₹200/day, capped')}
+  if(m===8)add(y,m,30,'ROC','DIR-3 KYC (directors)','₹5,000 fee')}
+ return out.sort((a,b)=>a.d-b.d).filter(e=>e.d-now>-3*864e5&&e.d-now<75*864e5)}
+let EV=[],CAT='All';
+function cd(e){const ms=e.d-new Date(),a=Math.abs(ms),d=Math.floor(a/864e5),h=Math.floor(a%864e5/36e5),mi=Math.floor(a%36e5/6e4),s=Math.floor(a%6e4/1e3),p=n=>String(n).padStart(2,'0');return`<span class="cd ${ms<0?'r':ms<3*864e5?'a':'g'}">${ms<0?'Overdue ':''}${d}d ${p(h)}:${p(mi)}:${p(s)}</span>`}
+function tick(){const n=new Date();$('stripClock').textContent=n.toLocaleString('en-IN',{weekday:'short',day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit',second:'2-digit'})+' IST';$('radarMonth').textContent=MON[n.getMonth()]+' '+n.getFullYear();
+ const up=EV.filter(e=>e.d>n);if(up[0])$('stripNext').textContent=up[0].t.split('(')[0].split(':')[0].trim()+' · '+up[0].d.getDate()+' '+MON[up[0].d.getMonth()];
+ const tg=e=>`<span class="act-tag">${e.cat}</span>`+(e.ext?`<span class="act-tag ext">${e.ext}</span>`:'');
+ $('radarItems').innerHTML=up.slice(0,4).map(e=>`<div class="radar-item"><div>${tg(e)}<div><b>${e.t}</b> · ${e.d.getDate()} ${MON[e.d.getMonth()]}</div><div class="pen">${e.pen}</div></div>${cd(e)}</div>`).join('');
+ $('calList').innerHTML=EV.filter(e=>CAT==='All'||e.cat===CAT).map(e=>`<div class="radar-item"><div class="dd">${e.d.getDate()}<small>${MON[e.d.getMonth()]}</small></div><div>${tg(e)}<div><b>${e.t}</b></div><div class="pen">Late: ${e.pen}</div></div>${cd(e)}</div>`).join('')}
+function initCal(){EV=build();$('calF').innerHTML=['All',...new Set(EV.map(e=>e.cat))].map(c=>`<button class="calc-tab-btn ${c===CAT?'active':''}" onclick="CAT='${c}';initCal()">${c}</button>`).join('');tick()}
+initCal();setInterval(tick,1000);
+
+/* ---- Income tax engine ---- */
+const tx=(inc,b)=>{let t=0,p=0;for(const[l,r]of b){if(inc>p)t+=(Math.min(inc,l)-p)*r;p=l}return t};
+const NEWB=[[4e5,0],[8e5,.05],[12e5,.10],[16e5,.15],[2e6,.20],[24e5,.25],[1e12,.30]];
+const oldB=a=>[[a==='sr'?3e5:a==='ss'?5e5:2.5e5,0],[5e5,.05],[10e5,.2],[1e12,.3]];
+const indSur=(i,nw)=>Math.min(i>2e7?(i>5e7&&!nw?.37:i>5e7&&nw?.25:.25):i>1e7?.15:i>5e6?.10:0,nw?.25:.37);
+function itTax(v,scm){const t=v.type,nw=scm==='new',res=v.res==='res',slab=['individual','huf','aop'].includes(t),indv=t==='individual';
+ let std=0,ded=0,hp=v.hp,sal=indv?v.sal:0;
+ if(indv){std=sal>0?(nw?75000:50000):0;ded=Math.min(v.enps,sal*(nw?.14:.10));if(nw)hp=Math.max(0,hp);else{ded+=Math.min(v.c80,150000)+v.d80+Math.min(v.nps,50000)+v.hra;hp-=Math.min(v.loan,200000)}}
+ else if(t==='huf'&&!nw)ded=Math.min(v.c80,150000)+v.d80;
+ const gross=sal+hp+v.biz+v.oth,normal=Math.max(0,gross-std-ded),stcg=v.stcg,ltcg=Math.max(0,v.l112-125000)+v.ltO,total=normal+stcg+ltcg,sp=stcg*.2+ltcg*.125;
+ let base,sr=0;
+ if(slab){base=tx(normal,nw?NEWB:oldB(indv&&res?v.age:'b'));sr=indSur(total,nw)}
+ else if(t==='firm'||t==='local'){base=normal*.3;sr=total>1e7?.12:0}
+ else if(t==='company'){if(!res){base=normal*.35;sr=total>1e8?.05:total>1e7?.02:0}else if(nw){base=normal*.22;sr=.10}else{base=normal*.25;sr=total>1e8?.12:total>1e7?.07:0}}
+ else{if(nw){base=normal*.22;sr=.10}else{base=tx(normal,[[1e4,.1],[2e4,.2],[1e12,.3]]);sr=total>1e7?.12:0}}
+ let reb=0;if(indv&&res){if(nw)reb=normal<=12e5?Math.min(base,6e4):Math.max(0,base-(normal-12e5));else if(normal<=5e5)reb=Math.min(base,12500);if(nw&&normal>12e5&&stcg+ltcg>0)reb=0}
+ const after=Math.max(0,base-reb)+sp,sc=after*sr,cess=(after+sc)*.04,tot=after+sc+cess;
+ return{gross,std,ded,taxable:total,base,sp,reb,sc,cess,tot,eff:gross>0?tot/gross*100:0}}
+const TY=[['individual','Individual'],['huf','HUF'],['firm','Partnership Firm / LLP'],['company','Company'],['aop','AOP / BOI'],['coop','Co-operative Society'],['local','Local Authority']];
+const SCH={slab:[['new','New regime (default)'],['old','Old regime (with deductions)'],['both','Compare both']],company:[['new','Concessional 22% scheme'],['old','Normal rates (25% / 30%)'],['both','Compare both']],flat:[['new','Flat rate (no scheme choice)']],coop:[['new','Concessional 22% scheme'],['old','Normal slab rates'],['both','Compare both']]};
+function itRun(v){const A=v.act==='2025',t=v.type,sc=v.scheme,list=sc==='both'?['old','new']:[sc],R=list.map(s=>itTax(v,s)),lab={old:'Old / Normal',new:'New / Concessional'};
+ const row=f=>`<div class="calc-res-row ${list.length>1?'c3':''}"><span>${f[0]}</span>${R.map(r=>`<b>${f[1](r)}</b>`).join('')}</div>`;
+ const best=R.length>1?`<div class="banner">✔ ${R[1].tot<=R[0].tot?'New / Concessional':'Old / Normal'} scheme saves ${INR(Math.abs(R[0].tot-R[1].tot))}.</div>`:'';
+ const o=R.length>1?(R[1].tot<=R[0].tot?R[1]:R[0]):R[0],adv=o.tot>=10000?[['15 Jun · 15%',.15],['15 Sep · 45%',.45],['15 Dec · 75%',.75],['15 Mar · 100%',1]]:[];
+ return best+`<div class="calc-res-row h ${list.length>1?'c3':''}"><span>${A?'Income-tax Act 2025':'Income-tax Act 1961'}</span>${list.map(s=>`<span style="text-align:right">${lab[s]}</span>`).join('')}</div>`
+ +row(['Gross income',r=>INR(r.gross)])+row(['Standard deduction '+(A?'(s.19)':'(16ia)'),r=>INR(r.std)])+row(['Deductions',r=>INR(r.ded)])+row(['Taxable income',r=>INR(r.taxable)])+row(['Tax at '+(A?'s.202 / applicable rates':'applicable rates'),r=>INR(r.base)])+row(['Special-rate tax (CG)',r=>INR(r.sp)])+row(['Rebate '+(A?'(s.156)':'(87A)'),r=>'−'+INR(r.reb)])+row(['Surcharge',r=>INR(r.sc)])+row(['Cess 4%',r=>INR(r.cess)])
+ +`<div class="calc-res-row total ${list.length>1?'c3':''}"><span>Net tax payable</span>${R.map(r=>`<b>${INR(r.tot)}</b>`).join('')}</div>`+row(['Effective rate',r=>r.eff.toFixed(1)+'%'])
+ +(t==='individual'?row(['Monthly TDS estimate (s.392)',r=>INR(r.tot/12)]):'')
+ +(adv.length?`<div class="calc-res-row h"><span>Advance tax schedule</span><span></span></div>`+adv.map(a=>`<div class="calc-res-row"><span>${a[0]}</span><b>${INR(o.tot*a[1])}</b></div>`).join(''):'<div class="note">Liability under ₹10,000: advance tax not required.</div>')
+ +(v.res!=='res'&&t==='individual'?'<div class="note warn">Rebate is available only to resident individuals.</div>':'')
+ +`<div class="note">New slabs: nil to ₹4L, 5% to 8L, 10% to 12L, 15% to 16L, 20% to 20L, 25% to 24L, 30% above; rebate up to ₹60,000 (income ≤ ₹12L, marginal relief above); std deduction ₹75,000. Surcharge marginal relief not modelled.</div>`}
+
+/* ---- Calculator registry ---- */
+const O=(...a)=>a.map(x=>x.split('|'));
+const CALCS={
+it:{n:'Income Tax Calculator',custom:true},
+gst:{n:'GST, E-Way & E-Invoice',f:[['amt','Invoice amount (₹)',200000],['mode','Amount is','ex',O('ex|Exclusive of GST','in|Inclusive of GST')],['rate','GST rate','18',O('0|0% Exempt','0.25|0.25% Rough diamonds','3|3% Gold','5|5%','18|18% Standard','40|40% Sin / luxury')],['type','Supply type','intra',O('intra|Intra-state (CGST + SGST)','inter|Inter-state (IGST)','rcm|Reverse Charge (RCM)')],['aato','Aggregate annual turnover (AATO)','lt',O('lt|Below ₹5 Cr','mid|₹5 Cr to ₹10 Cr','hi|₹10 Cr to ₹50 Cr','xl|Above ₹50 Cr')],['itc','Input tax credit available (₹)',20000]],
+ run(v){const r=+v.rate/100,base=v.mode==='ex'?v.amt:v.amt/(1+r),g=base*r,tot=base+g,ei=v.aato==='lt'?'Not mandatory':v.aato==='mid'?'Mandatory (B2B / exports)':'Mandatory + 30-day IRP limit';
+  return`<div class="calc-res-row"><span>Taxable value</span><b>${INR(base)}</b></div>`+(v.type==='intra'?`<div class="calc-res-row"><span>CGST</span><b>${INR(g/2)}</b></div><div class="calc-res-row"><span>SGST</span><b>${INR(g/2)}</b></div>`:v.type==='inter'?`<div class="calc-res-row"><span>IGST</span><b>${INR(g)}</b></div>`:`<div class="calc-res-row"><span>GST payable by recipient (RCM)</span><b>${INR(g)}</b></div>`)+`<div class="calc-res-row"><span>E-Way Bill (goods &gt; ₹50,000)</span><b style="color:${tot>5e4?'#f3a891':'#5fd09b'}">${tot>5e4?'Required':'Not required'}</b></div><div class="calc-res-row"><span>E-Invoice (IRN)</span><b>${ei}</b></div><div class="calc-res-row"><span>30-day IRP reporting limit</span><b style="color:${['hi','xl'].includes(v.aato)?'#f3a891':'#5fd09b'}">${['hi','xl'].includes(v.aato)?'Applies':'Not applicable'}</b></div><div class="calc-res-row"><span>Net GST after ITC</span><b>${v.type==='rcm'?'₹0 (ITC claimable)':INR(Math.max(0,g-v.itc))}</b></div><div class="calc-res-row total"><span>Invoice total</span><b>${INR(v.type==='rcm'?base:tot)}</b></div><div class="note">E-Invoicing applies above ₹5 Cr AATO. The 30-day IRP block applies from ₹10 Cr AATO (GSTN advisory, from 1 Apr 2025), so it also covers ₹50 Cr and above.</div>`}},
+nps:{n:'NPS Calculator',f:[['m','Monthly contribution (₹)',10000],['step','Annual step-up (%)',5],['age','Current age',30],['ret','Retirement age',60],['r','Expected return (% p.a.)',10],['ann','Annuity purchase (% of corpus, min 40)',40],['ar','Annuity rate (% p.a.)',6.5],['inf','Inflation (%)',5]],
+ run(v){let w=0,ret=v.ret;if(ret<=v.age){ret=v.age+1;w=1}let an=v.ann;if(an<40){an=40;w=1}if(an>100)an=100;const r=Math.min(v.r,25)/1200;let c=0,inv=0,m=v.m;for(let y=0;y<ret-v.age;y++){for(let i=0;i<12;i++){c=(c+m)*(1+r);inv+=m}m*=1+v.step/100}
+  return(w?'<div class="note warn">Inputs adjusted to limits (annuity ≥ 40%, retirement after current age).</div>':'')+`<div class="calc-res-row"><span>Total invested</span><b>${INR(inv)}</b></div><div class="calc-res-row"><span>Gains</span><b>${INR(c-inv)}</b></div><div class="calc-res-row"><span>Corpus at retirement</span><b>${INR(c)}</b></div><div class="calc-res-row"><span>Today's value (inflation-adjusted)</span><b>${INR(c/Math.pow(1+v.inf/100,ret-v.age))}</b></div><div class="calc-res-row"><span>Lump sum (${100-an}%)</span><b>${INR(c*(1-an/100))}</b></div><div class="calc-res-row total"><span>Monthly pension</span><b>${INR(c*an/100*v.ar/1200)}</b></div>`}},
+bon:{n:'Statutory Bonus',f:[['sal','Monthly wage (₹)',18000],['mw','State minimum wage (₹, optional)',0],['pct','Bonus % (8.33 to 20)',8.33],['mo','Months worked',12]],
+ run(v){const el=v.sal<=21000,w=Math.min(v.sal,Math.max(7000,v.mw)),p=Math.min(20,Math.max(8.33,v.pct)),mo=Math.min(v.mo,12);
+  return`<div class="calc-res-row"><span>Eligible (wage ≤ ₹21,000)</span><b style="color:${el?'#5fd09b':'#f3a891'}">${el?'Yes':'No'}</b></div><div class="calc-res-row"><span>Wage ceiling used</span><b>${INR(w)}</b></div><div class="calc-res-row"><span>Minimum bonus (8.33%)</span><b>${INR(w*mo*.0833)}</b></div><div class="calc-res-row total"><span>Bonus payable @ ${p}%</span><b>${el?INR(w*mo*p/100):'₹0'}</b></div>${v.pct<8.33||v.pct>20?'<div class="note warn">Percentage clamped to the statutory 8.33%–20% range.</div>':''}<div class="note">Ceiling is ₹7,000 or state minimum wage, whichever is higher.</div>`}},
+grat:{n:'Gratuity Calculator',f:[['sal','Last drawn monthly basic + DA (₹)',50000],['yrs','Completed years of service',8],['mo','Extra months',7],['type','Employment type','perm',O('perm|Permanent (5-year rule)','fixed|Fixed-term (1-year rule)','death|Death / disability')]],
+ run(v){const y=v.yrs+(v.mo>6?1:0),ok=v.type==='death'||v.yrs+v.mo/12>=(v.type==='perm'?5:1),g=v.sal*15*y/26;
+  return`<div class="calc-res-row"><span>Service counted</span><b>${y} years</b></div><div class="calc-res-row"><span>Eligibility</span><b style="color:${ok?'#5fd09b':'#f3a891'}">${ok?'Eligible':'Not yet eligible'}</b></div><div class="calc-res-row"><span>Computed gratuity</span><b>${INR(g)}</b></div><div class="calc-res-row total"><span>Payable (₹20L cap)</span><b>${ok?INR(Math.min(g,2e6)):'₹0'}</b></div><div class="note">Formula: salary × 15 × years ÷ 26; more than 6 months rounds up.</div>`}}};
+let cur='it';
+const fld=(id,l,val,opts,cls='')=>`<div class="calc-field ${cls}"><label for="c_${id}">${l}</label>${opts?`<select id="c_${id}" onchange="${id==='type'&&cur==='it'?'itDyn()':'calc()'}">${opts.map(o=>`<option value="${o[0]}" ${o[0]===String(val)?'selected':''}>${o[1]}</option>`).join('')}</select>`:`<input id="c_${id}" type="number" min="0" step="any" value="${val}" oninput="calc()">`}</div>`;
+const IT=[['sal','Salary income (₹)',1800000,0,'ind'],['hp','House property income (₹)',0],['biz','Business / profession profit (₹)',0],['oth','Other sources (₹)',50000],['stcg','STCG on equity, 111A (₹)',0],['l112','LTCG on equity, 112A (₹)',0],['ltO','Other LTCG at 12.5% (₹)',0],['c80','80C investments (old) (₹)',150000,0,'ded'],['d80','80D health insurance (old) (₹)',25000,0,'ded'],['nps','NPS 80CCD(1B) (old) (₹)',50000,0,'ind ded'],['hra','HRA exemption (old) (₹)',120000,0,'ind ded'],['loan','Home-loan interest (old) (₹)',0,0,'ind ded'],['enps','Employer NPS contribution (₹)',0,0,'ind']];
+function show(k){cur=k;const c=CALCS[k];$('cTitle').textContent=c.n;$('tabs').innerHTML=Object.entries(CALCS).map(([i,x])=>`<button class="calc-tab-btn ${i===k?'active':''}" onclick="show('${i}')">${x.n}</button>`).join('');
+ if(c.custom){$('cIn').innerHTML=fld('act','1. Income-tax Act','2025',O('2025|Income-tax Act 2025 (Tax Year 2026-27)','1961|Income-tax Act 1961 (AY 2026-27)'))+fld('type','2. Assessee / taxpayer type','individual',TY)+`<div class="two">${fld('res','3. Residential status','res',O('res|Resident','nri|Non-resident','rnor|RNOR'))}${fld('age','Age (individual)','b',O('b|Below 60','sr|60 to 79','ss|80 and above'),'indOnly')}</div>`+`<div id="schW">${fld('scheme','4. Choice of scheme','new',SCH.slab)}</div>`+IT.map(f=>fld(f[0],f[1],f[2],null,f[4]||'')).join('');itDyn()}
+ else{$('cIn').innerHTML=c.f.map(f=>fld(f[0],f[1],f[2],f[3])).join('');calc()}}
+function itDyn(){const t=$('c_type').value,k=['individual','huf','aop'].includes(t)?'slab':t==='company'?'company':t==='coop'?'coop':'flat',old=$('c_scheme')?.value;
+ $('schW').innerHTML=fld('scheme','4. Choice of scheme',SCH[k].some(o=>o[0]===old)?old:'new',SCH[k]);
+ document.querySelectorAll('#cIn .ind').forEach(e=>e.style.display=t==='individual'?'':'none');
+ document.querySelectorAll('#cIn .ded').forEach(e=>e.style.display=['individual','huf'].includes(t)?'':'none');
+ document.querySelectorAll('#cIn .indOnly').forEach(e=>e.style.display=t==='individual'?'':'none');
+ document.querySelectorAll('#cIn .ind.ded').forEach(e=>e.style.display=t==='individual'?'':'none');calc()}
+function calc(){const c=CALCS[cur],v={};if(c.custom){['act','type','res','age','scheme'].forEach(i=>v[i]=$('c_'+i).value);IT.forEach(f=>v[f[0]]=Math.max(0,parseFloat($('c_'+f[0]).value)||0));if(!['individual','huf','aop'].includes(v.type)&&v.hp<0)v.hp=0;
+  if(v.type!=='individual')v.sal=0;$('cOut').innerHTML=itRun(v)}
+ else{c.f.forEach(f=>{const e=$('c_'+f[0]);v[f[0]]=f[3]?e.value:Math.max(0,parseFloat(e.value)||0)});$('cOut').innerHTML=c.run(v)}}
+show('it');
+
+function filterSiteContent() {
+  const q = document.getElementById('siteSearch').value.toLowerCase();
+  document.querySelectorAll('.cardx, .sector-card, #ftbl tbody tr').forEach(el => {
+    el.style.display = el.textContent.toLowerCase().includes(q) ? '' : 'none';
+  });
+}
+function handleFormSubmit(e) {
+  e.preventDefault();
+  const status = document.getElementById('formStatus');
+  status.style.color = '#2f8a63';
+  status.textContent = 'Thank you! Your call request has been logged. a Chartered Accountant from our team will contact you within 24 hours.';
+  document.getElementById('consultationForm').reset();
+}
+</script>
+
+</body>
+</html>
